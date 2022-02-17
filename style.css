@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(91, 255, 247);
+}
+
+@keyframes move {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+article {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.line {
+  width: 80px;
+  height: 100vh;
+  background-color: green;
+  border-left: solid 10px rgb(0, 65, 0);
+  border-right: solid 10px rgb(0, 65, 0);
+  position: absolute;
+  right: 0;
+  animation: move 5s infinite linear;
+}
+
+.hole {
+  width: 100px;
+  height: 250px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 35vh;
+  animation: move 5s infinite linear;
+}
+
+.bird {
+  width: 100px;
+  height: 75px;
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-bird {
+  background-image: url('bird.png');
+  width: 200px;
+  height: 200px;
+  left: -40px;
+  top: -70px;
+  position: absolute;
+  background-size: cover;
+}
