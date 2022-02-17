@@ -37,7 +37,7 @@ article {
 .hole {
   width: 100px;
   height: 250px;
-  background-color: white;
+  background-color: rgb(91, 255, 247);
   position: absolute;
   right: 0;
   top: 35vh;
