@@ -31,7 +31,7 @@ article {
   border-right: solid 10px rgb(0, 65, 0);
   position: absolute;
   right: 0;
-  animation: move 5s infinite linear;
+  animation: move 2s infinite linear;
 }
 
 .hole {
@@ -41,7 +41,7 @@ article {
   position: absolute;
   right: 0;
   top: 35vh;
-  animation: move 5s infinite linear;
+  animation: move 2s infinite linear;
 }
 
 .bird {

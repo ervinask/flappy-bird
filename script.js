@@ -5,6 +5,10 @@ let jumps = 0;
 let height = window.innerHeight;
 let counter = 0;
 
+let angleMin = 10;
+let angleSpeed = 80;
+let currentAngle = 0;
+
 hole.addEventListener('animationiteration', function () {
   let randomHole = Math.random() * 60 + 5;
   hole.style.top = `${randomHole}vh`;
@@ -38,6 +42,7 @@ setInterval(gravity, 7);
 
 const jumpMax = 20;
 const jumpSpeed = 10;
+
 function jumping() {
   jumps = 1;
   let jumpCount = 0;
@@ -46,7 +51,11 @@ function jumping() {
       window.getComputedStyle(bird).getPropertyValue('top')
     );
     let ratio = jumpCount / jumpMax;
-    if (birdPos > 6) bird.style.top = birdPos - jumpSpeed * (1 - ratio) + 'px';
+    if (birdPos > 6) {
+      bird.style.top = birdPos - jumpSpeed * (1 - ratio) + 'px';
+      currentAngle = `rotate(${angleMin - angleSpeed * (1 - ratio)}`;
+      bird.style.transform = currentAngle + 'deg';
+    }
     if (jumpCount > jumpMax) {
       clearInterval(jumpInterval);
       jumps = 0;
